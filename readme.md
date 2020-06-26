@@ -5,6 +5,6 @@ The purpose of this project is to realise a domotic application in order to cont
 2) Manual
 3) Alarm clock
 
-==
+=================================================================
 
 Group 9: Saporito Diego, Romano Salvatore, Maresca Liccione Antonio
