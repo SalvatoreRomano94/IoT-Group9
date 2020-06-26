@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Smart Shutters</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://api.zerynth.com/zadm/latest/z.js"></script>
+		<script src="myscript.js"></script>
+	</head>
+	<body>
+		<h3>Your Smart Shutters</h3>
+		<table>
+			<tr>
+				<td>
+					<input id="automatic" type="radio" name="function" value="automatic"  checked>Automatic</input>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input id="manual" type="radio" name="function" value="manual"> Manual</input>
+				</td>
+				<td>
+					<div class="myslider">
+						<input id= "slide" type="range" min="-90" max="90" step="5" onchange="update(this.value,'val');"></input><span id="val"></span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button id="alarm_but" type="button">Alarm</button> 
+				</td>
+				<td>
+					<div class="form_orario">
+						<label>h:</label>
+						<input id="hour" type="text" size="4"></input>
+						<label> m:</label>
+						<input id="minute" type="text" size="4"></input>
+						<button type="button" id="send_alarm" onfocus="blur();">Send!</button> 
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<br>
+					<br>
+					<map name="primary">
+					  <area id="map" shape="rect" coords="224,179,295,237" href="djjvncdsk.html">
+					</map>
+					<img id="planimetria" usemap="#primary" src="planimetria-casa-automatic.jpg" width="325" height="259" alt="350 x 150 pic">
+				</td>
+			</tr>
+			<tr>
+				<td>
+				<div id="security">
+					<h1>ALARM</h1>
+					<button type="button" id="stop_security">stop</button>
+				</div>
+				</td>
+			</tr>
+			<tr>
+				<td>Modality:</td>
+				<td id="modality"></td>
+			</tr>
+			<tr>
+				<td>State:</td>
+				<td id="state"></td>
+			</tr>
+			<tr>
+				<td>Alarm:</td>
+				<td id="alarm"></td>
+			</tr>
+			<tr>
+				<td>
+					<div id="alarm_information">
+						alarm set at:<span id="alarm_clock"></span>
+						<button type="button" id="cancel_alarm">cancel/stop</button>
+					</div>
+				</td>
+			</tr>
+			
+			
+	</table>
+		<script>
+			// After loading the page, call the
+			// initialize() function
+			$(function () {
+				initialize();
+			});
+		</script>
+	</body>
+</html>
